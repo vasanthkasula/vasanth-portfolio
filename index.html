@@ -1,0 +1,857 @@
+# Ultra Premium Portfolio for Vasanth Kasula
+
+Here's a completely redesigned, ultra premium portfolio using your existing information with enhanced styling, animations, and a more sophisticated layout:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vasanth Kasula | Data Analyst & AI/ML Engineer</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+        
+        .skill-bar {
+            height: 8px;
+            border-radius: 4px;
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            transition: width 1s ease-in-out;
+        }
+        
+        .timeline-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            left: 11px;
+            top: 24px;
+            height: 100%;
+            width: 2px;
+            background: #3b82f6;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100">
+    <!-- Animated Background -->
+    <div class="fixed inset-0 -z-10 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 opacity-90"></div>
+        <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-10"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="glass-card fixed w-full top-0 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-2xl font-bold gradient-text">Vasanth Kasula</a>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#about" class="hover:text-blue-400 transition duration-300">About</a>
+                    <a href="#skills" class="hover:text-blue-400 transition duration-300">Skills</a>
+                    <a href="#experience" class="hover:text-blue-400 transition duration-300">Experience</a>
+                    <a href="#projects" class="hover:text-blue-400 transition duration-300">Projects</a>
+                    <a href="#contact" class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-full transition duration-300">Contact</a>
+                </div>
+                <button class="md:hidden focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-full">
+            <div class="absolute top-20 left-20 w-64 h-64 bg-blue-500 rounded-full filter blur-3xl opacity-20 animate-pulse"></div>
+            <div class="absolute bottom-20 right-20 w-64 h-64 bg-purple-500 rounded-full filter blur-3xl opacity-20 animate-pulse delay-300"></div>
+        </div>
+        
+        <div class="container mx-auto px-6 text-center z-10">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 animate__animated animate__fadeInDown">
+                Hi, I'm <span class="gradient-text">Vasanth Kasula</span>
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 text-gray-300 animate__animated animate__fadeIn animate__delay-1s">
+                Data Analyst & AI/ML Engineer crafting intelligent solutions
+            </p>
+            <div class="flex justify-center space-x-6 animate__animated animate__fadeIn animate__delay-2s">
+                <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-semibold transition duration-300 flex items-center">
+                    <i class="fas fa-paper-plane mr-2"></i> Hire Me
+                </a>
+                <a href="#projects" class="border border-blue-400 hover:bg-blue-900/30 text-blue-400 px-8 py-3 rounded-full font-semibold transition duration-300 flex items-center">
+                    <i class="fas fa-code mr-2"></i> My Work
+                </a>
+            </div>
+            
+            <div class="mt-20 animate__animated animate__fadeIn animate__delay-3s">
+                <div class="inline-flex space-x-6">
+                    <a href="https://www.linkedin.com/in/vasanth-kasula-314428285" target="_blank" class="w-12 h-12 rounded-full bg-gray-800 hover:bg-blue-600 flex items-center justify-center transition duration-300">
+                        <i class="fab fa-linkedin-in text-xl"></i>
+                    </a>
+                    <a href="https://github.com/vasanthkasula" target="_blank" class="w-12 h-12 rounded-full bg-gray-800 hover:bg-gray-700 flex items-center justify-center transition duration-300">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="mailto:kasulavasanth55@gmail.com" class="w-12 h-12 rounded-full bg-gray-800 hover:bg-red-500 flex items-center justify-center transition duration-300">
+                        <i class="fas fa-envelope text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="mt-24 animate-bounce">
+                <a href="#about" class="text-gray-400 hover:text-white transition duration-300">
+                    <i class="fas fa-chevron-down text-2xl"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 relative">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 gradient-text">About Me</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2 relative">
+                    <div class="floating">
+                        <div class="relative">
+                            <div class="w-64 h-64 md:w-80 md:h-80 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full mx-auto"></div>
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="w-60 h-60 md:w-72 md:h-72 bg-gray-800 rounded-full overflow-hidden border-4 border-gray-700">
+                                    <!-- Placeholder for profile image -->
+                                    <div class="w-full h-full bg-gray-700 flex items-center justify-center">
+                                        <i class="fas fa-user text-6xl text-gray-500"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <h3 class="text-2xl font-semibold mb-6">Detail-oriented <span class="gradient-text">Data Analyst</span> and <span class="gradient-text">AI/ML Engineer</span></h3>
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        I specialize in transforming raw data into actionable insights and building scalable AI solutions. With expertise in Python, SQL, and machine learning algorithms, I help organizations optimize processes and make data-driven decisions.
+                    </p>
+                    <p class="text-gray-300 mb-8 leading-relaxed">
+                        My passion lies at the intersection of data analysis and artificial intelligence, where I leverage cutting-edge technologies like deep learning and generative AI to solve complex problems and create innovative solutions.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-400 mr-3"></i>
+                            <span>Data Analysis</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-400 mr-3"></i>
+                            <span>Machine Learning</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-400 mr-3"></i>
+                            <span>AI Solutions</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-400 mr-3"></i>
+                            <span>Data Visualization</span>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full font-semibold transition duration-300">
+                            Contact Me
+                        </a>
+                        <a href="#" class="border border-blue-400 hover:bg-blue-900/30 text-blue-400 px-6 py-2 rounded-full font-semibold transition duration-300">
+                            Download CV
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-800/50 relative">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 gradient-text">Technical Skills</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto"></div>
+                <p class="text-gray-300 max-w-2xl mx-auto mt-4">Here are the technologies and tools I'm proficient in</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Programming Languages -->
+                <div class="glass-card p-8 rounded-xl hover:bg-gray-800/70 transition duration-300">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-lg bg-blue-900/30 flex items-center justify-center mr-4">
+                            <i class="fas fa-code text-blue-400 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Programming Languages</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Python</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2">
+                                <div class="skill-bar rounded-full h-2" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>SQL</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2">
+                                <div class="skill-bar rounded-full h-2" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>C</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2">
+                                <div class="skill-bar rounded-full h-2" style="width: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Data Analysis -->
+                <div class="glass-card p-8 rounded-xl hover:bg-gray-800/70 transition duration-300">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-lg bg-blue-900/30 flex items-center justify-center mr-4">
+                            <i class="fas fa-chart-bar text-blue-400 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Data Analysis</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Pandas, NumPy</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2">
+                                <div class="skill-bar rounded-full h-2" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Excel, Power BI</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2">
+                                <div class="skill-bar rounded-full h-2" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Matplotlib, Seaborn</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2">
+                                <div class="skill-bar rounded-full h-2" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- AI/ML -->
+                <div class="glass-card p-8 rounded-xl hover:bg-gray-800/70 transition duration-300">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-lg bg-blue-900/30 flex items-center justify-center mr-4">
+                            <i class="fas fa-robot text-blue-400 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">AI/ML</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>TensorFlow, PyTorch</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2">
+                                <div class="skill-bar rounded-full h-2" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Scikit-learn</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2">
+                                <div class="skill-bar rounded-full h-2" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Neural Networks</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2">
+                                <div class="skill-bar rounded-full h-2" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Gen AI -->
+                <div class="glass-card p-8 rounded-xl hover:bg-gray-800/70 transition duration-300">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-lg bg-blue-900/30 flex items-center justify-center mr-4">
+                            <i class="fas fa-brain text-blue-400 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Gen AI</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>LLM's</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2">
+                                <div class="skill-bar rounded-full h-2" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Transformers</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2">
+                                <div class="skill-bar rounded-full h-2" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>RAG</span>
+                                <span>65%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2">
+                                <div class="skill-bar rounded-full h-2" style="width: 65%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Web Development -->
+                <div class="glass-card p-8 rounded-xl hover:bg-gray-800/70 transition duration-300">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-lg bg-blue-900/30 flex items-center justify-center mr-4">
+                            <i class="fas fa-globe text-blue-400 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Web Development</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>HTML/CSS</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2">
+                                <div class="skill-bar rounded-full h-2" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>JavaScript</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2">
+                                <div class="skill-bar rounded-full h-2" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Tailwind CSS</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="w-full bg-gray-700 rounded-full h-2">
+                                <div class="skill-bar rounded-full h-2" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Other Skills -->
+                <div class="glass-card p-8 rounded-xl hover:bg-gray-800/70 transition duration-300">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 rounded-lg bg-blue-900/30 flex items-center justify-center mr-4">
+                            <i class="fas fa-cogs text-blue-400 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Other Skills</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="bg-blue-900/30 text-blue-400 px-3 py-1 rounded-full">Data Visualization</span>
+                        <span class="bg-blue-900/30 text-blue-400 px-3 py-1 rounded-full">Time Series Analysis</span>
+                        <span class="bg-blue-900/30 text-blue-400 px-3 py-1 rounded-full">Predictive Modeling</span>
+                        <span class="bg-blue-900/30 text-blue-400 px-3 py-1 rounded-full">Data Cleaning</span>
+                        <span class="bg-blue-900/30 text-blue-400 px-3 py-1 rounded-full">Feature Engineering</span>
+                        <span class="bg-blue-900/30 text-blue-400 px-3 py-1 rounded-full">Model Deployment</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 relative">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 gradient-text">Work Experience</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto"></div>
+                <p class="text-gray-300 max-w-2xl mx-auto mt-4">My professional journey and contributions</p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto">
+                <div class="relative timeline-item pl-8 pb-12">
+                    <div class="absolute left-0 top-0 w-6 h-6 bg-blue-500 rounded-full z-10 flex items-center justify-center">
+                        <div class="w-3 h-3 bg-white rounded-full"></div>
+                    </div>
+                    <div class="glass-card p-8 rounded-xl">
+                        <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
+                            <h3 class="text-xl font-semibold">Data Analyst</h3>
+                            <span class="text-blue-400 font-medium">IGATE Constructions | 05/2024 - Present</span>
+                        </div>
+                        <ul class="space-y-3 text-gray-300">
+                            <li class="flex">
+                                <span class="text-blue-400 mr-2">•</span>
+                                Analyzed project cost data and material usage trends to identify inefficiencies, reducing overall costs by 10% over one year.
+                            </li>
+                            <li class="flex">
+                                <span class="text-blue-400 mr-2">•</span>
+                                Collaborated with project managers to create data-driven schedules, improving on-time project delivery by 15%.
+                            </li>
+                            <li class="flex">
+                                <span class="text-blue-400 mr-2">•</span>
+                                Automated cost analysis reports using Python scripts (Pandas, Matplotlib).
+                            </li>
+                            <li class="flex">
+                                <span class="text-blue-400 mr-2">•</span>
+                                Built predictive model for material demand forecasting (Scikit-learn, time-series analysis).
+                            </li>
+                            <li class="flex">
+                                <span class="text-blue-400 mr-2">•</span>
+                                Utilized Power BI for visualizing cost optimization insights.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-800/50 relative">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 gradient-text">Featured Projects</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto"></div>
+                <p class="text-gray-300 max-w-2xl mx-auto mt-4">Some of my recent work that I'm proud of</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Multiple Disease Prediction -->
+                <div class="project-card glass-card p-8 rounded-xl transition duration-300">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 rounded-lg bg-blue-900/30 flex items-center justify-center mr-4">
+                            <i class="fas fa-heartbeat text-blue-400 text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold">Multiple Disease Prediction System</h3>
+                            <p class="text-blue-400">AI/ML | Accuracy: 91% (F1 Score: 0.89)</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-6">
+                        Developed a machine learning-based system capable of predicting multiple diseases (diabetes, heart disease, Parkinson's) using patient health data, enabling early diagnosis and preventive healthcare measures.
+                    </p>
+                    <div class="mb-6">
+                        <h4 class="font-medium mb-3 text-gray-200">Technologies Used:</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-900/30 text-blue-400 px-3 py-1 rounded-full">Python</span>
+                            <span class="bg-blue-900/30 text-blue-400 px-3 py-1 rounded-full">Pandas</span>
+                            <span class="bg-blue-900/30 text-blue-400 px-3 py-1 rounded-full">Scikit-learn</span>
+                            <span class="bg-blue-900/30 text-blue-400 px-3 py-1 rounded-full">Streamlit</span>
+                            <span class="bg-blue-900/30 text-blue-400 px-3 py-1 rounded-full">NumPy</span>
+                        </div>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="https://mdpproject-vasanth.streamlit.app/" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full text-sm font-medium transition duration-300 flex items-center">
+                            <i class="fas fa-external-link-alt mr-2"></i> Live Demo
+                        </a>
+                        <a href="https://github.com/vasanthkasula" target="_blank" class="border border-blue-400 hover:bg-blue-900/30 text-blue-400 px-4 py-2 rounded-full text-sm font-medium transition duration-300 flex items-center">
+                            <i class="fab fa-github mr-2"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- House Price Prediction -->
+                <div class="project-card glass-card p-8 rounded-xl transition duration-300">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 rounded-lg bg-blue-900/30 flex items-center justify-center mr-4">
+                            <i class="fas fa-home text-blue-400 text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold">House Price Prediction</h3>
+                            <p class="text-blue-400">AI/ML | Accuracy: 86% (RMSE: $14500)</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-6">
+                        Developed a machine learning-based system to predict real estate prices using historical housing data, helping buyers and sellers make data-driven decisions in the competitive housing market.
+                    </p>
+                    <div class="mb-6">
+                        <h4 class="font-medium mb-3 text-gray-200">Technologies Used:</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-blue-900/30 text-blue-400 px-3 py-1 rounded-full">Python</span>
+                            <span class="bg-blue-900/30 text-blue-400 px-3 py-1 rounded-full">NumPy</span>
+                            <span class="bg-blue-900/30 text-blue-400 px-3 py-1 rounded-full">Scikit-learn</span>
+                            <span class="bg-blue-900/30 text-blue-400 px-3 py-1 rounded-full">Streamlit</span>
+                            <span class="bg-blue-900/30 text-blue-400 px-3 py-1 rounded-full">Pandas</span>
+                        </div>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="https://hppproject-vasanth.streamlit.app/" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full text-sm font-medium transition duration-300 flex items-center">
+                            <i class="fas fa-external-link-alt mr-2"></i> Live Demo
+                        </a>
+                        <a href="https://github.com/vasanthkasula" target="_blank" class="border border-blue-400 hover:bg-blue-900/30 text-blue-400 px-4 py-2 rounded-full text-sm font-medium transition duration-300 flex items-center">
+                            <i class="fab fa-github mr-2"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Certifications -->
+    <section id="education" class="py-20 relative">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4 gradient-text">Education & Certifications</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto"></div>
+                <p class="text-gray-300 max-w-2xl mx-auto mt-4">My academic background and professional certifications</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <!-- Education -->
+                <div>
+                    <h3 class="text-2xl font-semibold mb-8 flex items-center">
+                        <i class="fas fa-graduation-cap text-blue-400 mr-3"></i>
+                        <span>Education</span>
+                    </h3>
+                    
+                    <div class="space-y-8">
+                        <div class="glass-card p-6 rounded-xl">
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 rounded-lg bg-blue-900/30 flex items-center justify-center mr-4 mt-1">
+                                    <i class="fas fa-university text-blue-400"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-lg">B.Tech (Computer Science)</h4>
+                                    <p class="text-blue-400 mb-2">Bharat Institute of Engineering and Technology | 2020-2024</p>
+                                    <p class="text-gray-300 text-sm">Specialized in Artificial Intelligence and Data Science applications</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="glass-card p-6 rounded-xl">
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 rounded-lg bg-blue-900/30 flex items-center justify-center mr-4 mt-1">
+                                    <i class="fas fa-school text-blue-400"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-lg">Intermediate (MPC)</h4>
+                                    <p class="text-blue-400 mb-2">Sri Gayatri Jr College</p>
+                                    <p class="text-gray-300 text-sm">Mathematics, Physics, Chemistry specialization</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="glass-card p-6 rounded-xl">
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 rounded-lg bg-blue-900/30 flex items-center justify-center mr-4 mt-1">
+                                    <i class="fas fa-book text-blue-400"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-lg">SSC</h4>
+                                    <p class="text-blue-400">St. Aloysious High School</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Certifications -->
+                <div>
+                    <h3 class="text-2xl font-semibold mb-8 flex items-center">
+                        <i class="fas fa-certificate text-blue-400 mr-3"></i>
+                        <span>Certifications</span>
+                    </h3>
+                    
+                    <div class="space-y-8">
+                        <div class="glass-card p-6 rounded-xl">
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 rounded-lg bg-blue-900/30 flex items-center justify-center mr-4 mt-1">
+                                    <i class="fab fa-ibm text-blue-400"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-lg">IBM Data Science Professional Certificate</h4>
+                                    <p class="text-blue-400 mb-2">2025</p>
+                                    <p class="text-gray-300 text-sm">Data analysis for ML, Supervised/Unsupervised learning, Deep Learning, Model Evaluation</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="glass-card p-6 rounded-xl">
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 rounded-lg bg-blue-900/30 flex items-center justify-center mr-4 mt-1">
+                                    <i class="fas fa-chart-line text-blue-400"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-lg">Data Analysis and Visualization</h4>
+                                    <p class="text-blue-400">IBM</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="glass-card p-6 rounded-xl">
+                            <div class="flex items-start">
+                                <div class="w-12 h-12 rounded-lg bg-blue-900/30 flex items-center justify-center mr-4 mt-1">
+                                    <i class="fab fa-microsoft text-blue-400"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-lg">Python for Data Science</h4>
+                                    <p class="text-blue-400">Microsoft</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gradient-to-br from-gray-900 to-blue-900/50 relative">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+				<h2 class="text-4xl font-bold mb-4 gradient-text">Get In Touch</h2>
+			<div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto"></div>
+				<p class="text-gray-300 max-w-2xl mx-auto mt-4">Have a project in mind or want to discuss opportunities? Feel free to reach out!</p>
+			</div
+			 <div class="flex flex-col lg:flex-row gap-12">
+            <div class="lg:w-1/2">
+                <div class="glass-card p-8 rounded-xl">
+                    <h3 class="text-2xl font-semibold mb-6">Contact Information</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 rounded-lg bg-blue-900/30 flex items-center justify-center mr-4">
+                                <i class="fas fa-envelope text-blue-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-300">Email</h4>
+                                <a href="mailto:kasulavasanth55@gmail.com" class="text-blue-400 hover:text-blue-300 transition duration-300">kasulavasanth55@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 rounded-lg bg-blue-900/30 flex items-center justify-center mr-4">
+                                <i class="fas fa-phone-alt text-blue-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-300">Phone</h4>
+                                <a href="tel:+919381429864" class="text-blue-400 hover:text-blue-300 transition duration-300">+91 7993712715</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 rounded-lg bg-blue-900/30 flex items-center justify-center mr-4">
+                                <i class="fas fa-map-marker-alt text-blue-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-300">Location</h4>
+                                <p class="text-blue-400">Hyderabad, India</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-10">
+                        <h4 class="font-medium text-gray-300 mb-4">Connect with me</h4>
+                        <div class="flex space-x-4">
+                            <a href="https://www.linkedin.com/in/vasanth-kasula-314428285" target="_blank" class="w-12 h-12 rounded-full bg-blue-900/30 hover:bg-blue-600 flex items-center justify-center transition duration-300">
+                                <i class="fab fa-linkedin-in text-xl"></i>
+                            </a>
+                            <a href="https://github.com/vasanthkasula" target="_blank" class="w-12 h-12 rounded-full bg-blue-900/30 hover:bg-gray-700 flex items-center justify-center transition duration-300">
+                                <i class="fab fa-github text-xl"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 rounded-full bg-blue-900/30 hover:bg-blue-400 flex items-center justify-center transition duration-300">
+                                <i class="fab fa-twitter text-xl"></i>
+                            </a>
+                            <a href="#" class="w-12 h-12 rounded-full bg-blue-900/30 hover:bg-red-500 flex items-center justify-center transition duration-300">
+                                <i class="fab fa-youtube text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="lg:w-1/2">
+                <div class="glass-card p-8 rounded-xl">
+                    <h3 class="text-2xl font-semibold mb-6">Send Me a Message</h3>
+                    <form>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label for="name" class="block text-gray-300 mb-2">Name</label>
+                                <input type="text" id="name" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-gray-300 mb-2">Email</label>
+                                <input type="email" id="email" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                        </div>
+                        <div class="mb-6">
+                            <label for="subject" class="block text-gray-300 mb-2">Subject</label>
+                            <input type="text" id="subject" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-300 mb-2">Message</label>
+                            <textarea id="message" rows="5" class="w-full bg-gray-800 border border-gray-700 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                        </div>
+                        <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-semibold transition duration-300 w-full md:w-auto">
+                            Send Message <i class="fas fa-paper-plane ml-2"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="py-12 bg-gray-900/80 relative">
+    <div class="container mx-auto px-6 text-center">
+        <div class="flex justify-center mb-8">
+            <a href="#" class="text-2xl font-bold gradient-text">Vasanth Kasula</a>
+        </div>
+        <div class="flex justify-center space-x-8 mb-8">
+            <a href="#about" class="hover:text-blue-400 transition duration-300">About</a>
+            <a href="#skills" class="hover:text-blue-400 transition duration-300">Skills</a>
+            <a href="#experience" class="hover:text-blue-400 transition duration-300">Experience</a>
+            <a href="#projects" class="hover:text-blue-400 transition duration-300">Projects</a>
+            <a href="#contact" class="hover:text-blue-400 transition duration-300">Contact</a>
+        </div>
+        <div class="flex justify-center space-x-6 mb-8">
+            <a href="https://www.linkedin.com/in/vasanth-kasula-314428285" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 hover:bg-blue-600 flex items-center justify-center transition duration-300">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/vasanthkasula" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 hover:bg-gray-700 flex items-center justify-center transition duration-300">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="mailto:kasulavasanth55@gmail.com" class="w-10 h-10 rounded-full bg-gray-800 hover:bg-red-500 flex items-center justify-center transition duration-300">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+        <p class="text-gray-400 text-sm">
+            &copy; 2024 Vasanth Kasula. All rights reserved.
+        </p>
+    </div>
+</footer>
+
+<!-- Back to Top Button -->
+<a href="#" class="fixed bottom-8 right-8 w-12 h-12 bg-blue-600 hover:bg-blue-700 rounded-full flex items-center justify-center transition duration-300 shadow-lg z-50">
+    <i class="fas fa-arrow-up text-white"></i>
+</a>
+
+<script>
+    // Animate skill bars on scroll
+    document.addEventListener('DOMContentLoaded', function() {
+        const skillBars = document.querySelectorAll('.skill-bar');
+        
+        const animateSkillBars = () => {
+            skillBars.forEach(bar => {
+                const width = bar.style.width;
+                bar.style.width = '0';
+                setTimeout(() => {
+                    bar.style.width = width;
+                }, 100);
+            });
+        };
+        
+        // Intersection Observer for skill bars animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateSkillBars();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        document.querySelector('#skills').style.opacity = '1';
+        observer.observe(document.querySelector('#skills'));
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('.md\\:hidden');
+        mobileMenuButton.addEventListener('click', function() {
+            // Implement mobile menu functionality here
+            alert('Mobile menu would open here in a full implementation');
+        });
+    });
+</script>
+</body> 
+</html>
